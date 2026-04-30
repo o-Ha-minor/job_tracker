@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  position: MyString
+  tech_stack: MyString
+  status: MyString
+  interest_level: 1
+  applied_on: 2026-04-30
+  first_interview_on: 2026-04-30
+  second_interview_on: 2026-04-30
+  final_interview_on: 2026-04-30
+  offer_received_on: 2026-04-30
+  offer_response_deadline: 2026-04-30
+  concern: MyText
+  questions: MyText
+  memo: MyText
+
+two:
+  company_name: MyString
+  position: MyString
+  tech_stack: MyString
+  status: MyString
+  interest_level: 1
+  applied_on: 2026-04-30
+  first_interview_on: 2026-04-30
+  second_interview_on: 2026-04-30
+  final_interview_on: 2026-04-30
+  offer_received_on: 2026-04-30
+  offer_response_deadline: 2026-04-30
+  concern: MyText
+  questions: MyText
+  memo: MyText

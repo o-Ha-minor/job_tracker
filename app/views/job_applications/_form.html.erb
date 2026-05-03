@@ -1,7 +1,7 @@
 <%= form_with(model: job_application) do |form| %>
   <% if job_application.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(job_application.errors.count, "error") %> prohibited this job_application from being saved:</h2>
+      <h2><%= pluralize(job_application.errors.count, "エラー") %>により、この応募を保存できませんでした:</h2>
 
       <ul>
         <% job_application.errors.each do |error| %>
@@ -12,76 +12,76 @@
   <% end %>
 
   <div>
-    <%= form.label :company_name, style: "display: block" %>
+    <%= form.label :company_name, "会社名", style: "display: block" %>
     <%= form.text_field :company_name %>
   </div>
 
   <div>
-    <%= form.label :position, style: "display: block" %>
+    <%= form.label :position, "ポジション", style: "display: block" %>
     <%= form.text_field :position %>
   </div>
 
   <div>
-    <%= form.label :tech_stack, style: "display: block" %>
+    <%= form.label :tech_stack, "技術スタック", style: "display: block" %>
     <%= form.text_field :tech_stack %>
   </div>
 
   <div>
-    <%= form.label :status, style: "display: block" %>
+    <%= form.label :status, "ステータス", style: "display: block" %>
     <%= form.text_field :status %>
   </div>
 
   <div>
-    <%= form.label :interest_level, style: "display: block" %>
+    <%= form.label :interest_level, "興味レベル", style: "display: block" %>
     <%= form.number_field :interest_level %>
   </div>
 
   <div>
-    <%= form.label :applied_on, style: "display: block" %>
+    <%= form.label :applied_on, "応募日", style: "display: block" %>
     <%= form.date_field :applied_on %>
   </div>
 
   <div>
-    <%= form.label :first_interview_on, style: "display: block" %>
+    <%= form.label :first_interview_on, "一次面接日", style: "display: block" %>
     <%= form.date_field :first_interview_on %>
   </div>
 
   <div>
-    <%= form.label :second_interview_on, style: "display: block" %>
+    <%= form.label :second_interview_on, "二次面接日", style: "display: block" %>
     <%= form.date_field :second_interview_on %>
   </div>
 
   <div>
-    <%= form.label :final_interview_on, style: "display: block" %>
+    <%= form.label :final_interview_on, "最終面接日", style: "display: block" %>
     <%= form.date_field :final_interview_on %>
   </div>
 
   <div>
-    <%= form.label :offer_received_on, style: "display: block" %>
+    <%= form.label :offer_received_on, "オファー受領日", style: "display: block" %>
     <%= form.date_field :offer_received_on %>
   </div>
 
   <div>
-    <%= form.label :offer_response_deadline, style: "display: block" %>
+    <%= form.label :offer_response_deadline, "オファー回答期限", style: "display: block" %>
     <%= form.date_field :offer_response_deadline %>
   </div>
 
   <div>
-    <%= form.label :concern, style: "display: block" %>
+    <%= form.label :concern, "懸念事項", style: "display: block" %>
     <%= form.textarea :concern %>
   </div>
 
   <div>
-    <%= form.label :questions, style: "display: block" %>
+    <%= form.label :questions, "質問", style: "display: block" %>
     <%= form.textarea :questions %>
   </div>
 
   <div>
-    <%= form.label :memo, style: "display: block" %>
+    <%= form.label :memo, "メモ", style: "display: block" %>
     <%= form.textarea :memo %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "送信" %>
   </div>
 <% end %>

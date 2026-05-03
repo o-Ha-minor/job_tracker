@@ -1,16 +1,36 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Job applications" %>
+<% content_for :title, "求人応募" %>
 
-<h1>Job applications</h1>
+<h1>求人応募</h1>
 
 <div id="job_applications">
-  <% @job_applications.each do |job_application| %>
-    <%= render job_application %>
-    <p>
-      <%= link_to "Show this job application", job_application %>
-    </p>
-  <% end %>
+  <% columns = JobApplication.column_names - ["id", "created_at", "updated_at", "tech_stack", "concern", "questions", "memo", ""]%>
+  <table>
+    <thead>
+      <tr>
+        <% columns.each do |column_name|%>
+          <th><%= column_name %></th>
+        <% end %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @job_applications.each do |job_application| %>
+        <tr>
+          <% columns.each do |column_name| %>
+            <td>
+              <%= job_application[column_name] %>
+            </td>
+          <% end %>
+          <td>
+            <%= link_to "◻︎", job_application %>
+          </td>
+        </tr>
+      <% end %>
+     
+    </tbody>
+  </table>
 </div>
 
-<%= link_to "New job application", new_job_application_path %>
+<%= link_to "新しい求人応募を作成", new_job_application_path %>

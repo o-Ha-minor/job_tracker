@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    attributes:
+      job_application:
+        company_name: "会社名"
+        position: "職種"
+        tech_stack: "使用技術"
+        status: "選考状況"
+        interest_level: "志望度"
+        applied_on: "応募日"
+        first_interview_on: "一次面接日"
+        second_interview_on: "二次面接日"
+        final_interview_on: "最終面接日"
+        offer_received_on: "内定日"
+        offer_response_deadline: "内定回答期限"
+        concern: "懸念点"
+        questions: "確認したいこと"
+        memo: "メモ"

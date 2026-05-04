@@ -1,11 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "求人応募" %>
+<% content_for :title, "応募状況" %>
 
 <h1>応募状況</h1>
 
 <div id="job_applications" class="job_applications" >
-  <% columns = JobApplication.column_names - ["id", "created_at", "updated_at", "tech_stack", "concern", "questions", "memo", ""]%>
+  <% columns = JobApplication.column_names - ["id", "created_at", "updated_at", "tech_stack", "concern", "questions", "memo"]%>
   <table class="job-application-table">
     <thead>
       <tr>

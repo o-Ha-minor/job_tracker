@@ -2,11 +2,11 @@
 
 <% content_for :title, "求人応募" %>
 
-<h1>求人応募</h1>
+<h1>応募状況</h1>
 
-<div id="job_applications">
+<div id="job_applications" class="job_applications" >
   <% columns = JobApplication.column_names - ["id", "created_at", "updated_at", "tech_stack", "concern", "questions", "memo", ""]%>
-  <table>
+  <table class="job-application-table">
     <thead>
       <tr>
         <% columns.each do |column_name|%>

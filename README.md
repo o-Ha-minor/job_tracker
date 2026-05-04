@@ -1,24 +1,41 @@
 # README
+# Job Tracker
+このアプリは、求人応募の進捗を管理するためのツールです。
+Railsアプリ作成の復習を兼ねて、自分にとって実用的なアプリを作成しました。
+scaffoldコマンドを使って、シンプルに作成しました。
+フロントは復習のため、敢えてCSSのみで作成しました。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 主な機能
+- **求人応募管理**: 求人応募の作成、編集、削除が可能です。
+- **進捗状況の追跡**: 各タスクの進捗状況を簡単に確認できます。
 
-Things you may want to cover:
+## 使用方法
+1. 新しい求人応募を作成します。
+2. 求人応募の進捗状況を更新します。
+3. 一覧画面で確認できます。
 
-* Ruby version
+## 必要条件
+- Ruby 3.0+
+- Rails 7.0+
 
-* System dependencies
+## セットアップ
+1. リポジトリをクローンします。
+    ```bash
+    git clone https://github.com/your-repo/job_tracker.git
+    ```
+2. 必要なGemをインストールします。
+    ```bash
+    bundle install
+    ```
+3. データベースをセットアップします。
+    ```bash
+    rails db:setup
+    ```
+4. サーバーを起動します。
+    ```bash
+    rails server
+    ```
 
-* Configuration
+## 貢献
+バグ報告や機能提案は、Issueを通じてお知らせください。
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

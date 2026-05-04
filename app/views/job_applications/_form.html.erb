@@ -28,12 +28,26 @@
 
   <div>
     <%= form.label :status, "ステータス", style: "display: block" %>
-    <%= form.text_field :status %>
+    <%= form.select :status, [
+      ["応募中", "applied"],
+      ["一次面接", "first_interview"],
+      ["二次面接", "second_interview"],
+      ["最終面接", "final_interview"],
+      ["オファー受領", "offer_received"],
+      ["オファー辞退", "offer_declined"],
+      ["不採用", "rejected"]
+    ] %>
   </div>
 
   <div>
     <%= form.label :interest_level, "興味レベル", style: "display: block" %>
-    <%= form.number_field :interest_level %>
+    <%= form.select :interest_level, [
+      ["5", 5 ],
+      ["4", 4 ],
+      ["3", 3 ],
+      ["2", 2 ],
+      ["1", 1 ]
+    ] %>
   </div>
 
   <div>

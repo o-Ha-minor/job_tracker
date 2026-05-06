@@ -1,33 +1,33 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  company_name: MyString
-  position: MyString
-  tech_stack: MyString
-  status: MyString
-  interest_level: 1
-  applied_on: 2026-04-30
-  first_interview_on: 2026-04-30
-  second_interview_on: 2026-04-30
+  company_name: 株式会社テスト
+  position: Railsエンジニア
+  tech_stack: Ruby on Rails
+  status: 応募中
+  interest_level: 3
+  applied_on: 2026-04-08
+  first_interview_on: 2026-04-15
+  second_interview_on: 2026-04-22
   final_interview_on: 2026-04-30
-  offer_received_on: 2026-04-30
-  offer_response_deadline: 2026-04-30
-  concern: MyText
-  questions: MyText
-  memo: MyText
+  offer_received_on: 2026-05-01
+  offer_response_deadline: 2026-05-10
+  concern: テスト用の懸念事項
+  questions: テスト用の質問
+  memo: テスト用メモ
 
 two:
-  company_name: MyString
-  position: MyString
-  tech_stack: MyString
-  status: MyString
-  interest_level: 1
-  applied_on: 2026-04-30
-  first_interview_on: 2026-04-30
-  second_interview_on: 2026-04-30
-  final_interview_on: 2026-04-30
-  offer_received_on: 2026-04-30
-  offer_response_deadline: 2026-04-30
-  concern: MyText
-  questions: MyText
-  memo: MyText
+  company_name: 株式会社サンプル
+  position: Webエンジニア
+  tech_stack: Ruby, Rails, JavaScript
+  status: 一次面接
+  interest_level: 4
+  applied_on: 2026-04-10
+  first_interview_on: 2026-04-18
+  second_interview_on: 2026-04-25
+  final_interview_on: 2026-05-02
+  offer_received_on: 2026-05-03
+  offer_response_deadline: 2026-05-12
+  concern: サンプル懸念事項
+  questions: サンプル質問
+  memo: サンプルメモ

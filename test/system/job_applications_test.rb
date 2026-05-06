@@ -60,7 +60,10 @@ class JobApplicationsTest < ApplicationSystemTestCase
 
   test "should destroy job application" do
     visit job_application_url(@job_application)
-    click_on "削除", match: :first
+
+    accept_confirm "本当に削除しますか？" do
+      click_on "削除", match: :first
+    end
 
     assert_text "応募を削除しました。"
   end

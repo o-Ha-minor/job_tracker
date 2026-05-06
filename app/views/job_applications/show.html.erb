@@ -6,6 +6,6 @@
   <div class="show-actions">
     <%= link_to "編集", edit_job_application_path(@job_application), class: "button-secondary" %>
     <%= link_to "一覧に戻る", job_applications_path, class: "button-secondary" %>
-    <%= button_to "削除", @job_application, method: :delete, class: "button-danger" %>
+    <%= button_to "削除", @job_application, method: :delete, class: "button-danger", data: { turbo_confirm: "本当に削除しますか？" } %>
   </div>
 </div>

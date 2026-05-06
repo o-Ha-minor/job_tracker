@@ -9,7 +9,7 @@ module ApplicationHelper
     heisei_year = date.year - 1988
     "H#{heisei_year}.#{date.month}.#{date.day}"
    else
-    date.strftime("%Y.%m.%d")
+    "#{date.year}.#{date.month}.#{date.day}"
    end
  end
 end

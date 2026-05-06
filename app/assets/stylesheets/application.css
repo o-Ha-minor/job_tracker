@@ -51,7 +51,7 @@
  .job-application-form {
     max-width: 760px;
     margin: 32px auto;
-    background-color: rgb(232, 232, 232);;
+    background-color: rgb(232, 232, 232);
     padding: 24px;
     border-radius: 12px;
     color: #000033;
@@ -80,7 +80,7 @@
     border-radius: 6px;
     background-color: #ffffff;
     color: #000033;
-    font-family: inherit;
+    font-family:  "ヒラギノ明朝 ProN", "游明朝", "Times New Roman", "Georgia", serif;
     font-size: 1em;
  }
 

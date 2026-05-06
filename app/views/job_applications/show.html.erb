@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 
-<%= render @job_application %>
+<div class="job-application-show">
+  <%= render @job_application %>
 
-<div>
-  <%= link_to "この求人応募を編集", edit_job_application_path(@job_application) %> |
-  <%= link_to "求人応募一覧に戻る", job_applications_path %>
-
-  <%= button_to "この求人応募を削除", @job_application, method: :delete %>
+  <div class="show-actions">
+    <%= link_to "編集", edit_job_application_path(@job_application), class: "button-secondary" %>
+    <%= link_to "一覧に戻る", job_applications_path, class: "button-secondary" %>
+    <%= button_to "削除", @job_application, method: :delete, class: "button-danger" %>
+  </div>
 </div>

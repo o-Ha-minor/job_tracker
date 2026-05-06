@@ -1,12 +1,12 @@
-<% content_for :title, "Editing job application" %>
+<% content_for :title, "編集" %>
 
-<h1>Editing job application</h1>
+<h1>応募情報の編集</h1>
 
 <%= render "form", job_application: @job_application %>
 
 <br>
 
 <div>
-  <%= link_to "Show this job application", @job_application %> |
-  <%= link_to "Back to job applications", job_applications_path %>
+  <%= link_to "詳細を表示", @job_application %> |
+  <%= link_to "応募一覧に戻る", job_applications_path %>
 </div>

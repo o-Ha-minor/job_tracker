@@ -7,61 +7,61 @@ class JobApplicationsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit job_applications_url
-    assert_selector "h1", text: "Job applications"
+    assert_selector "h1", text: "応募状況"
   end
 
   test "should create job application" do
     visit job_applications_url
-    click_on "New job application"
+    click_on "新しい求人応募を作成"
 
-    fill_in "Applied on", with: @job_application.applied_on
-    fill_in "Company name", with: @job_application.company_name
-    fill_in "Concern", with: @job_application.concern
-    fill_in "Final interview on", with: @job_application.final_interview_on
-    fill_in "First interview on", with: @job_application.first_interview_on
-    fill_in "Interest level", with: @job_application.interest_level
-    fill_in "Memo", with: @job_application.memo
-    fill_in "Offer received on", with: @job_application.offer_received_on
-    fill_in "Offer response deadline", with: @job_application.offer_response_deadline
-    fill_in "Position", with: @job_application.position
-    fill_in "Questions", with: @job_application.questions
-    fill_in "Second interview on", with: @job_application.second_interview_on
-    fill_in "Status", with: @job_application.status
-    fill_in "Tech stack", with: @job_application.tech_stack
-    click_on "Create Job application"
+    fill_in "応募日", with: @job_application.applied_on
+    fill_in "会社名", with: @job_application.company_name
+    fill_in "懸念事項", with: @job_application.concern
+    fill_in "最終面接日", with: @job_application.final_interview_on
+    fill_in "一次面接日", with: @job_application.first_interview_on
+    select @job_application.interest_level.to_s, from: "興味レベル"
+    fill_in "メモ", with: @job_application.memo
+    fill_in "オファー受領日", with: @job_application.offer_received_on
+    fill_in "オファー回答期限", with: @job_application.offer_response_deadline
+    fill_in "ポジション", with: @job_application.position
+    fill_in "質問", with: @job_application.questions
+    fill_in "二次面接日", with: @job_application.second_interview_on
+    select @job_application.status, from: "ステータス"
+    fill_in "技術スタック", with: @job_application.tech_stack
+    click_on "送信"
 
-    assert_text "Job application was successfully created"
-    click_on "Back"
+    assert_text "応募を作成しました。"
+    click_on "一覧に戻る"
   end
 
-  test "should update Job application" do
+  test "should update job application" do
     visit job_application_url(@job_application)
-    click_on "Edit this job application", match: :first
+    click_on "編集", match: :first
 
-    fill_in "Applied on", with: @job_application.applied_on
-    fill_in "Company name", with: @job_application.company_name
-    fill_in "Concern", with: @job_application.concern
-    fill_in "Final interview on", with: @job_application.final_interview_on
-    fill_in "First interview on", with: @job_application.first_interview_on
-    fill_in "Interest level", with: @job_application.interest_level
-    fill_in "Memo", with: @job_application.memo
-    fill_in "Offer received on", with: @job_application.offer_received_on
-    fill_in "Offer response deadline", with: @job_application.offer_response_deadline
-    fill_in "Position", with: @job_application.position
-    fill_in "Questions", with: @job_application.questions
-    fill_in "Second interview on", with: @job_application.second_interview_on
-    fill_in "Status", with: @job_application.status
-    fill_in "Tech stack", with: @job_application.tech_stack
-    click_on "Update Job application"
+    fill_in "応募日", with: @job_application.applied_on
+    fill_in "会社名", with: @job_application.company_name
+    fill_in "懸念事項", with: @job_application.concern
+    fill_in "最終面接日", with: @job_application.final_interview_on
+    fill_in "一次面接日", with: @job_application.first_interview_on
+    select @job_application.interest_level.to_s, from: "興味レベル"
+    fill_in "メモ", with: @job_application.memo
+    fill_in "オファー受領日", with: @job_application.offer_received_on
+    fill_in "オファー回答期限", with: @job_application.offer_response_deadline
+    fill_in "ポジション", with: @job_application.position
+    fill_in "質問", with: @job_application.questions
+    fill_in "二次面接日", with: @job_application.second_interview_on
+    select @job_application.status, from: "ステータス"
+    fill_in "技術スタック", with: @job_application.tech_stack
+    click_on "送信"
 
-    assert_text "Job application was successfully updated"
-    click_on "Back"
+    assert_text "応募を更新しました。"
+    click_on "一覧に戻る"
   end
 
-  test "should destroy Job application" do
+  test "should destroy job application" do
     visit job_application_url(@job_application)
-    click_on "Destroy this job application", match: :first
+    click_on "削除", match: :first
 
-    assert_text "Job application was successfully destroyed"
+    assert_text "応募を削除しました。"
   end
 end

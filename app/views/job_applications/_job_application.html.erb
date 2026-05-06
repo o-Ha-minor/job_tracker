@@ -1,72 +1,71 @@
-<div id="<%= dom_id job_application %>">
-  <p>
-    <strong>会社名:</strong>
-    <%= job_application.company_name %>
+<div id="<%= dom_id job_application %>" class="job-application-detail">
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:company_name) %></strong>
+    <span class="detail-value"><%= job_application.company_name.presence || "-" %></span>
   </p>
 
-  <p>
-    <strong>ポジション:</strong>
-    <%= job_application.position %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:position) %></strong>
+    <span class="detail-value"><%= job_application.position.presence || "-" %></span>
   </p>
 
-  <p>
-    <strong>技術スタック:</strong>
-    <%= job_application.tech_stack %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:tech_stack) %></strong>
+    <span class="detail-value"><%= job_application.tech_stack.presence || "-" %></span>
   </p>
 
-  <p>
-    <strong>ステータス:</strong>
-    <%= job_application.status %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:status) %></strong>
+    <span class="detail-value"><%= job_application.status.presence || "-" %></span>
   </p>
 
-  <p>
-    <strong>興味レベル:</strong>
-    <%= job_application.interest_level %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:interest_level) %></strong>
+    <span class="detail-value"><%= job_application.interest_level.presence || "-" %></span>
   </p>
 
-  <p>
-    <strong>応募日:</strong>
-    <%= job_application.applied_on %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:applied_on) %></strong>
+    <span class="detail-value"><%= format_japanese_era_date(job_application.applied_on) %></span>
   </p>
 
-  <p>
-    <strong>一次面接日:</strong>
-    <%= job_application.first_interview_on %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:first_interview_on) %></strong>
+    <span class="detail-value"><%= format_japanese_era_date(job_application.first_interview_on) %></span>
   </p>
 
-  <p>
-    <strong>二次面接日:</strong>
-    <%= job_application.second_interview_on %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:second_interview_on) %></strong>
+    <span class="detail-value"><%= format_japanese_era_date(job_application.second_interview_on) %></span>
   </p>
 
-  <p>
-    <strong>最終面接日:</strong>
-    <%= job_application.final_interview_on %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:final_interview_on) %></strong>
+    <span class="detail-value"><%= format_japanese_era_date(job_application.final_interview_on) %></span>
   </p>
 
-  <p>
-    <strong>オファー受領日:</strong>
-    <%= job_application.offer_received_on %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:offer_received_on) %></strong>
+    <span class="detail-value"><%= format_japanese_era_date(job_application.offer_received_on) %></span>
   </p>
 
-  <p>
-    <strong>オファー回答期限:</strong>
-    <%= job_application.offer_response_deadline %>
+  <p class="detail-item">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:offer_response_deadline) %></strong>
+    <span class="detail-value"><%= format_japanese_era_date(job_application.offer_response_deadline) %></span>
   </p>
 
-  <p>
-    <strong>懸念事項:</strong>
-    <%= job_application.concern %>
+  <p class="detail-item detail-item-text">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:concern) %></strong>
+    <span class="detail-value"><%= simple_format(job_application.concern.presence || "-") %></span>
   </p>
 
-  <p>
-    <strong>質問:</strong>
-    <%= job_application.questions %>
+  <p class="detail-item detail-item-text">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:questions) %></strong>
+    <span class="detail-value"><%= simple_format(job_application.questions.presence || "-") %></span>
   </p>
 
-  <p>
-    <strong>メモ:</strong>
-    <%= job_application.memo %>
+  <p class="detail-item detail-item-text">
+    <strong class="detail-label"><%= JobApplication.human_attribute_name(:memo) %></strong>
+    <span class="detail-value"><%= simple_format(job_application.memo.presence || "-") %></span>
   </p>
-
 </div>

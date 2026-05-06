@@ -1,101 +1,103 @@
-<%= form_with(model: job_application) do |form| %>
-  <% if job_application.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(job_application.errors.count, "エラー") %>により、この応募を保存できませんでした:</h2>
+<div class="job-application-form">
+  <%= form_with(model: job_application) do |form| %>
+    <% if job_application.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(job_application.errors.count, "エラー") %>により、この応募を保存できませんでした:</h2>
 
-      <ul>
-        <% job_application.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% job_application.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-row">
+      <%= form.label :company_name, "会社名", class: "form-label" %>
+      <%= form.text_field :company_name, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :position, "ポジション", class: "form-label" %>
+      <%= form.text_field :position, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :tech_stack, "技術スタック", class: "form-label" %>
+      <%= form.text_field :tech_stack, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :status, "ステータス", class: "form-label" %>
+      <%= form.select :status, [
+        ["応募中", "応募中"],
+        ["一次面接", "一次面接"],
+        ["二次面接", "二次面接"],
+        ["最終面接", "最終面接"],
+        ["オファー受領", "オファー受領"],
+        ["オファー辞退", "オファー辞退"],
+        ["不採用", "不採用"]
+      ], {}, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :interest_level, "興味レベル", class: "form-label" %>
+      <%= form.select :interest_level, [
+        ["5", 5 ],
+        ["4", 4 ],
+        ["3", 3 ],
+        ["2", 2 ],
+        ["1", 1 ]
+      ], {}, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :applied_on, "応募日", class: "form-label" %>
+      <%= form.date_field :applied_on, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :first_interview_on, "一次面接日", class: "form-label" %>
+      <%= form.date_field :first_interview_on, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :second_interview_on, "二次面接日", class: "form-label" %>
+      <%= form.date_field :second_interview_on, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :final_interview_on, "最終面接日", class: "form-label" %>
+      <%= form.date_field :final_interview_on, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :offer_received_on, "オファー受領日", class: "form-label" %>
+      <%= form.date_field :offer_received_on, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :offer_response_deadline, "オファー回答期限", class: "form-label" %>
+      <%= form.date_field :offer_response_deadline, class: "form-control" %>
+    </div>
+
+    <div class="form-row form-row-textarea">
+      <%= form.label :concern, "懸念事項", class: "form-label" %>
+      <%= form.textarea :concern, class: "form-control form-textarea" %>
+    </div>
+
+    <div class="form-row form-row-textarea">
+      <%= form.label :questions, "質問", class: "form-label" %>
+      <%= form.textarea :questions, class: "form-control form-textarea" %>
+    </div>
+
+    <div class="form-row form-row-textarea">
+      <%= form.label :memo, "メモ", class: "form-label" %>
+      <%= form.textarea :memo, class: "form-control form-textarea" %>
+    </div>
+
+    <div class="form-actions">
+      <%= form.submit "送信", class: "button-primary" %>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :company_name, "会社名", style: "display: block" %>
-    <%= form.text_field :company_name %>
-  </div>
-
-  <div>
-    <%= form.label :position, "ポジション", style: "display: block" %>
-    <%= form.text_field :position %>
-  </div>
-
-  <div>
-    <%= form.label :tech_stack, "技術スタック", style: "display: block" %>
-    <%= form.text_field :tech_stack %>
-  </div>
-
-  <div>
-    <%= form.label :status, "ステータス", style: "display: block" %>
-    <%= form.select :status, [
-      ["応募中", "応募中"],
-      ["一次面接", "一次面接"],
-      ["二次面接", "二次面接"],
-      ["最終面接", "最終面接"],
-      ["オファー受領", "オファー受領"],
-      ["オファー辞退", "オファー辞退"],
-      ["不採用", "不採用"]
-    ] %>
-  </div>
-
-  <div>
-    <%= form.label :interest_level, "興味レベル", style: "display: block" %>
-    <%= form.select :interest_level, [
-      ["5", 5 ],
-      ["4", 4 ],
-      ["3", 3 ],
-      ["2", 2 ],
-      ["1", 1 ]
-    ] %>
-  </div>
-
-  <div>
-    <%= form.label :applied_on, "応募日", style: "display: block" %>
-    <%= form.date_field :applied_on %>
-  </div>
-
-  <div>
-    <%= form.label :first_interview_on, "一次面接日", style: "display: block" %>
-    <%= form.date_field :first_interview_on %>
-  </div>
-
-  <div>
-    <%= form.label :second_interview_on, "二次面接日", style: "display: block" %>
-    <%= form.date_field :second_interview_on %>
-  </div>
-
-  <div>
-    <%= form.label :final_interview_on, "最終面接日", style: "display: block" %>
-    <%= form.date_field :final_interview_on %>
-  </div>
-
-  <div>
-    <%= form.label :offer_received_on, "オファー受領日", style: "display: block" %>
-    <%= form.date_field :offer_received_on %>
-  </div>
-
-  <div>
-    <%= form.label :offer_response_deadline, "オファー回答期限", style: "display: block" %>
-    <%= form.date_field :offer_response_deadline %>
-  </div>
-
-  <div>
-    <%= form.label :concern, "懸念事項", style: "display: block" %>
-    <%= form.textarea :concern %>
-  </div>
-
-  <div>
-    <%= form.label :questions, "質問", style: "display: block" %>
-    <%= form.textarea :questions %>
-  </div>
-
-  <div>
-    <%= form.label :memo, "メモ", style: "display: block" %>
-    <%= form.textarea :memo %>
-  </div>
-
-  <div>
-    <%= form.submit "送信" %>
-  </div>
-<% end %>
+</div>

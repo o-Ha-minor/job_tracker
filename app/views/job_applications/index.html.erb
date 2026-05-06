@@ -23,7 +23,11 @@
         <tr>
           <% columns.each do |column_name| %>
             <td>
-              <%= job_application[column_name] %>
+              <% if column_name.end_with?("_on") || column_name == "offer_response_deadline" %>
+                <%= format_japanese_era_date(job_application[column_name]) %>
+              <% else %>
+                <%= job_application[column_name] %>
+              <% end %>
             </td>
           <% end %>
           <td>

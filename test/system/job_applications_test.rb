@@ -19,7 +19,7 @@ class JobApplicationsTest < ApplicationSystemTestCase
     fill_in "懸念事項", with: @job_application.concern
     fill_in "最終面接日", with: @job_application.final_interview_on
     fill_in "一次面接日", with: @job_application.first_interview_on
-    select @job_application.interest_level.to_s, from: "興味レベル"
+    select @job_application.interest_level.to_s, from: "志望度"
     fill_in "メモ", with: @job_application.memo
     fill_in "オファー受領日", with: @job_application.offer_received_on
     fill_in "オファー回答期限", with: @job_application.offer_response_deadline
@@ -43,7 +43,7 @@ class JobApplicationsTest < ApplicationSystemTestCase
     fill_in "懸念事項", with: @job_application.concern
     fill_in "最終面接日", with: @job_application.final_interview_on
     fill_in "一次面接日", with: @job_application.first_interview_on
-    select @job_application.interest_level.to_s, from: "興味レベル"
+    select @job_application.interest_level.to_s, from: "志望度"
     fill_in "メモ", with: @job_application.memo
     fill_in "オファー受領日", with: @job_application.offer_received_on
     fill_in "オファー回答期限", with: @job_application.offer_response_deadline

@@ -29,26 +29,18 @@
 
     <div class="form-row">
       <%= form.label :status, "ステータス", class: "form-label" %>
-      <%= form.select :status, [
-        ["応募中", "応募中"],
-        ["一次面接", "一次面接"],
-        ["二次面接", "二次面接"],
-        ["最終面接", "最終面接"],
-        ["オファー受領", "オファー受領"],
-        ["オファー辞退", "オファー辞退"],
-        ["不採用", "不採用"]
-      ], {}, class: "form-control" %>
+      <%= form.select :status,
+        JobApplication::STATUSES.map { |status| [status, status] },
+        { prompt: "ステータスを選択してください" },
+        class: "form-control" %>
     </div>
 
     <div class="form-row">
-      <%= form.label :interest_level, "興味レベル", class: "form-label" %>
-      <%= form.select :interest_level, [
-        ["5", 5 ],
-        ["4", 4 ],
-        ["3", 3 ],
-        ["2", 2 ],
-        ["1", 1 ]
-      ], {}, class: "form-control" %>
+      <%= form.label :interest_level, "志望度", class: "form-label" %>
+      <%= form.select :interest_level,
+        JobApplication::LEVELS.reverse.map { |level| [level.to_s, level] },
+        { prompt: "志望度を選択してください" },
+        class: "form-control" %>
     </div>
 
     <div class="form-row">

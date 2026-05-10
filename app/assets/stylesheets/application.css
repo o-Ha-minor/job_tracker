@@ -84,24 +84,43 @@
     font-size: 1em;
  }
 
- .detail-item {
-    margin-bottom: 10px;
-    display: flex;
-    max-width: 760px auto;
+.job-application-show {
+    max-width: 820px;
+    margin: 32px auto;
+    padding: 24px;
     background-color: rgb(232, 232, 232);
-    padding: 12px;
-    border-radius: 5px;
+    border-radius: 12px;
+}
+
+.job-application-detail {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+ .detail-item {
+    margin-bottom: 1px solid #e5e7eb;
+    margin: 0;
+    display: flex;
+ }
+
+ .detail-item:last-child {
+    border-bottom: none;
  }
 
  .detail-label {
+    width: 180px;
     font-weight: 600;
-    color: #00006d;
-    width: 150px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 100);
     flex-shrink: 0;
  }
 
  .detail-value {
-      color: #000033;
-      font-family: "ヒラギノ明朝 ProN", "游明朝", "Times New Roman", "Georgia", serif;
-      flex: 1;
+    padding: 12px 16px;
+    color: #000033;
+    background-color: rgb(243, 243, 255);
+    font-family: "ヒラギノ明朝 ProN", "游明朝", "Times New Roman", "Georgia", serif;
+    flex: 1;
  }

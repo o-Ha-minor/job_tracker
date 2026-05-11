@@ -1,9 +1,6 @@
 require "test_helper"
 
 class JobApplicationTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
   test "valid fixture" do
     assert job_applications(:one).valid?
   end

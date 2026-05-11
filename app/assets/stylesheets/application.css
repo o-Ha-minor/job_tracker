@@ -103,7 +103,7 @@
     border-bottom: 1px solid #e5e7eb;
     margin: 0;
     display: flex;
- }
+}
 
  .detail-item:last-child {
     border-bottom: none;

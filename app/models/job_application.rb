@@ -12,18 +12,21 @@ class JobApplication < ApplicationRecord
   LEVELS = (1..5).to_a.freeze
 
   validates :company_name, presence: true
-  varidates :company_name, length: { maximum: 50 }
+  validates :company_name, length: { maximum: 50 }
   validates :position, presence: true
-  varidates :position, lenghe: { maximum: 50 }
+  validates :position, lenghe: { maximum: 50 }
   validates :status, presence: true, inclusion: { in: STATUSES }
   validates :interest_level, presence: true, inclusion: { in: LEVELS }
   validates :tech_stack, length: { maximum: 50 }
   validates :concern, :questions, :memo, length: { maximum: 1000 }
+  validate :first_interview_on_after_applied_on
 
   private
 
   def first_interview_on_after_applied_on
     return if applied_on.blank? || first_interview_on.blank?
-      errors.add(:first_interview_on, "は応募日移行の日付を入力してください")
+    return if first_interview_on >= applied_on
+
+    errors.add(:first_interview_on, "は応募日移行の日付を入力してください")
   end
 end
